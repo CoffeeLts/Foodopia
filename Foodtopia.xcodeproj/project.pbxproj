@@ -15,6 +15,9 @@
 		271D85C51F4EA1B80033C9BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 271D85C31F4EA1B80033C9BC /* LaunchScreen.storyboard */; };
 		271D85D01F4EA1B80033C9BC /* FoodtopiaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271D85CF1F4EA1B80033C9BC /* FoodtopiaTests.swift */; };
 		271D85DB1F4EA1B80033C9BC /* FoodtopiaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271D85DA1F4EA1B80033C9BC /* FoodtopiaUITests.swift */; };
+		271D85E91F4EAA3C0033C9BC /* HomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271D85E81F4EAA3C0033C9BC /* HomePage.swift */; };
+		271D85EF1F4EAAAB0033C9BC /* HomePageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271D85EE1F4EAAAB0033C9BC /* HomePageCell.swift */; };
+		271D85F11F4EABF80033C9BC /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271D85F01F4EABF80033C9BC /* Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		271D85D61F4EA1B80033C9BC /* FoodtopiaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FoodtopiaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		271D85DA1F4EA1B80033C9BC /* FoodtopiaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodtopiaUITests.swift; sourceTree = "<group>"; };
 		271D85DC1F4EA1B80033C9BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		271D85E81F4EAA3C0033C9BC /* HomePage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePage.swift; sourceTree = "<group>"; };
+		271D85EE1F4EAAAB0033C9BC /* HomePageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePageCell.swift; sourceTree = "<group>"; };
+		271D85F01F4EABF80033C9BC /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +105,10 @@
 		271D85B71F4EA1B80033C9BC /* Foodtopia */ = {
 			isa = PBXGroup;
 			children = (
+				271D85EC1F4EAA7C0033C9BC /* Model */,
+				271D85ED1F4EAA890033C9BC /* View */,
+				271D85EA1F4EAA5F0033C9BC /* Controller */,
+				271D85EB1F4EAA6F0033C9BC /* Extensions */,
 				271D85B81F4EA1B80033C9BC /* AppDelegate.swift */,
 				271D85BA1F4EA1B80033C9BC /* FirstViewController.swift */,
 				271D85BC1F4EA1B80033C9BC /* SecondViewController.swift */,
@@ -126,6 +136,37 @@
 				271D85DC1F4EA1B80033C9BC /* Info.plist */,
 			);
 			path = FoodtopiaUITests;
+			sourceTree = "<group>";
+		};
+		271D85EA1F4EAA5F0033C9BC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				271D85E81F4EAA3C0033C9BC /* HomePage.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		271D85EB1F4EAA6F0033C9BC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				271D85F01F4EABF80033C9BC /* Extension.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		271D85EC1F4EAA7C0033C9BC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		271D85ED1F4EAA890033C9BC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				271D85EE1F4EAAAB0033C9BC /* HomePageCell.swift */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,6 +306,9 @@
 				271D85BD1F4EA1B80033C9BC /* SecondViewController.swift in Sources */,
 				271D85B91F4EA1B80033C9BC /* AppDelegate.swift in Sources */,
 				271D85BB1F4EA1B80033C9BC /* FirstViewController.swift in Sources */,
+				271D85F11F4EABF80033C9BC /* Extension.swift in Sources */,
+				271D85EF1F4EAAAB0033C9BC /* HomePageCell.swift in Sources */,
+				271D85E91F4EAA3C0033C9BC /* HomePage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
