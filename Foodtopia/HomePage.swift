@@ -31,9 +31,13 @@ class HomePage: UICollectionViewController {
     
     
     func setupCollectionView(){
-      
+        let screenHeight:CGFloat = UIScreen.main.bounds.height
+        
+        print(screenHeight)
+        print(view.bounds.height)
+        
         let cellWidth = floor(view.bounds.width / 3) - 10
-        let cellHeight = floor(view.bounds.height / 3 )
+        let cellHeight = floor(screenHeight / 3 ) - 100
         
 //        let insetX = (view.bounds.width - cellWidth) / 2.0
 //        let insetY = ((view.bounds.height - 50) - cellHeight) / 2.0
