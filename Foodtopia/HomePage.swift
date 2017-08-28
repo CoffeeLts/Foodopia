@@ -10,7 +10,7 @@ import UIKit
 
 private let reuseIdentifier = "Cell"
 
-class HomePage: UICollectionViewController {
+class HomePage: UICollectionViewController , UICollectionViewDelegateFlowLayout{
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,18 +35,9 @@ class HomePage: UICollectionViewController {
         
         print(screenHeight)
         print(view.bounds.height)
-        
-        let cellWidth = floor(view.bounds.width / 3) - 10
-        let cellHeight = floor(screenHeight / 3 ) - 100
-        
-//        let insetX = (view.bounds.width - cellWidth) / 2.0
-//        let insetY = ((view.bounds.height - 50) - cellHeight) / 2.0
-        
-        let layout = collectionView!.collectionViewLayout as! UICollectionViewFlowLayout
-        layout.itemSize = CGSize(width: cellWidth, height: cellHeight)
-        collectionView?.contentInset = UIEdgeInsets(top: 4, left: 4, bottom: 0, right: 4)
-        
-        //collectionView?.register(MatchedFeedCell.self, forCellWithReuseIdentifier: "MFCell")
+
+        //let layout = collectionView!.collectionViewLayout as! UICollectionViewFlowLayout
+
         
     }
     
@@ -71,7 +62,7 @@ class HomePage: UICollectionViewController {
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        return 9
+        return 12
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -80,6 +71,28 @@ class HomePage: UICollectionViewController {
         // Configure the cell
     
         return cell
+    }
+    
+   override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("IndexPath = \(indexPath.item)")
+    
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        let w = Double(UIScreen.main.bounds.size.width)
+        
+        if (indexPath.row % 5) < 2 {
+            // 0.5 = (0 + 1 + 0) / 2
+            return CGSize(width: w/2 - 1.5, height: (w/2 - 1.0) * 1.3)
+        }
+        else if (indexPath.row % 5) > 1 {
+            // 0.666 = (0 + 1 + 1 + 0) / 3
+            return CGSize(width: w/3 - 1.8, height: (w/3 - 1.0) * 1.3)
+        }
+        else {
+            return CGSize(width: w/2 - 1.5, height: (w/2 - 1.0) * 1.3)
+        }
     }
 
     // MARK: UICollectionViewDelegate
