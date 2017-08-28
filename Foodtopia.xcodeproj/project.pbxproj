@@ -18,6 +18,10 @@
 		271D85E91F4EAA3C0033C9BC /* HomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271D85E81F4EAA3C0033C9BC /* HomePage.swift */; };
 		271D85EF1F4EAAAB0033C9BC /* HomePageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271D85EE1F4EAAAB0033C9BC /* HomePageCell.swift */; };
 		271D85F11F4EABF80033C9BC /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271D85F01F4EABF80033C9BC /* Extension.swift */; };
+		27CE09DE1F53FEA100A06081 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 27CE09DD1F53FEA100A06081 /* GoogleService-Info.plist */; };
+		51CB748CA3CD10D10F394278 /* Pods_Foodtopia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9D1F5B2ECEAD1709C9BE60D /* Pods_Foodtopia.framework */; };
+		87DF82E8115252D7EFE80398 /* Pods_FoodtopiaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16FF08C31CA9E254A950CB2B /* Pods_FoodtopiaTests.framework */; };
+		A3C0A05EB18A9488F30B237C /* Pods_FoodtopiaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3594110E41735AFDCAAE0825 /* Pods_FoodtopiaUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		16FF08C31CA9E254A950CB2B /* Pods_FoodtopiaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FoodtopiaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		271D85B51F4EA1B80033C9BC /* Foodtopia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Foodtopia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		271D85B81F4EA1B80033C9BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		271D85BA1F4EA1B80033C9BC /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -55,6 +60,15 @@
 		271D85E81F4EAA3C0033C9BC /* HomePage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePage.swift; sourceTree = "<group>"; };
 		271D85EE1F4EAAAB0033C9BC /* HomePageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePageCell.swift; sourceTree = "<group>"; };
 		271D85F01F4EABF80033C9BC /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		27CE09DD1F53FEA100A06081 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		3594110E41735AFDCAAE0825 /* Pods_FoodtopiaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FoodtopiaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7DF1F7BC6D2B1C3BC8503322 /* Pods-FoodtopiaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodtopiaTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FoodtopiaTests/Pods-FoodtopiaTests.release.xcconfig"; sourceTree = "<group>"; };
+		8E32193CE83DB0B179D47A5C /* Pods-Foodtopia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Foodtopia.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Foodtopia/Pods-Foodtopia.debug.xcconfig"; sourceTree = "<group>"; };
+		D9D1F5B2ECEAD1709C9BE60D /* Pods_Foodtopia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Foodtopia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DBBFED79B7F9AF01B8D83772 /* Pods-FoodtopiaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodtopiaUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FoodtopiaUITests/Pods-FoodtopiaUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		DFA8592DE3EBDBA70A0CBDC3 /* Pods-Foodtopia.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Foodtopia.release.xcconfig"; path = "Pods/Target Support Files/Pods-Foodtopia/Pods-Foodtopia.release.xcconfig"; sourceTree = "<group>"; };
+		EB487E10F006E21F8527FF33 /* Pods-FoodtopiaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodtopiaUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FoodtopiaUITests/Pods-FoodtopiaUITests.release.xcconfig"; sourceTree = "<group>"; };
+		FBF5C372BFBB32CA9D235210 /* Pods-FoodtopiaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodtopiaTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FoodtopiaTests/Pods-FoodtopiaTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51CB748CA3CD10D10F394278 /* Pods_Foodtopia.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87DF82E8115252D7EFE80398 /* Pods_FoodtopiaTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3C0A05EB18A9488F30B237C /* Pods_FoodtopiaUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +106,8 @@
 				271D85CE1F4EA1B80033C9BC /* FoodtopiaTests */,
 				271D85D91F4EA1B80033C9BC /* FoodtopiaUITests */,
 				271D85B61F4EA1B80033C9BC /* Products */,
+				BB9DE9CF1307272D9BF33977 /* Pods */,
+				30B18217814F74FFF9D7FB93 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -116,6 +135,7 @@
 				271D85C11F4EA1B80033C9BC /* Assets.xcassets */,
 				271D85C31F4EA1B80033C9BC /* LaunchScreen.storyboard */,
 				271D85C61F4EA1B80033C9BC /* Info.plist */,
+				27CE09DD1F53FEA100A06081 /* GoogleService-Info.plist */,
 			);
 			path = Foodtopia;
 			sourceTree = "<group>";
@@ -169,6 +189,29 @@
 			name = View;
 			sourceTree = "<group>";
 		};
+		30B18217814F74FFF9D7FB93 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D9D1F5B2ECEAD1709C9BE60D /* Pods_Foodtopia.framework */,
+				16FF08C31CA9E254A950CB2B /* Pods_FoodtopiaTests.framework */,
+				3594110E41735AFDCAAE0825 /* Pods_FoodtopiaUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BB9DE9CF1307272D9BF33977 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8E32193CE83DB0B179D47A5C /* Pods-Foodtopia.debug.xcconfig */,
+				DFA8592DE3EBDBA70A0CBDC3 /* Pods-Foodtopia.release.xcconfig */,
+				FBF5C372BFBB32CA9D235210 /* Pods-FoodtopiaTests.debug.xcconfig */,
+				7DF1F7BC6D2B1C3BC8503322 /* Pods-FoodtopiaTests.release.xcconfig */,
+				DBBFED79B7F9AF01B8D83772 /* Pods-FoodtopiaUITests.debug.xcconfig */,
+				EB487E10F006E21F8527FF33 /* Pods-FoodtopiaUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -176,9 +219,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 271D85DF1F4EA1B80033C9BC /* Build configuration list for PBXNativeTarget "Foodtopia" */;
 			buildPhases = (
+				7FE967E5559FEFB68762ADC2 /* [CP] Check Pods Manifest.lock */,
 				271D85B11F4EA1B80033C9BC /* Sources */,
 				271D85B21F4EA1B80033C9BC /* Frameworks */,
 				271D85B31F4EA1B80033C9BC /* Resources */,
+				B5D8B8CFDC02D8D60BD1901C /* [CP] Embed Pods Frameworks */,
+				ACB666C114BDB93D39235898 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -193,9 +239,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 271D85E21F4EA1B80033C9BC /* Build configuration list for PBXNativeTarget "FoodtopiaTests" */;
 			buildPhases = (
+				3DDA405CF963228219599F3F /* [CP] Check Pods Manifest.lock */,
 				271D85C71F4EA1B80033C9BC /* Sources */,
 				271D85C81F4EA1B80033C9BC /* Frameworks */,
 				271D85C91F4EA1B80033C9BC /* Resources */,
+				9C98D128FFC708AB3ED326C0 /* [CP] Embed Pods Frameworks */,
+				D386AB84DA24A32A2F1D289C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -211,9 +260,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 271D85E51F4EA1B80033C9BC /* Build configuration list for PBXNativeTarget "FoodtopiaUITests" */;
 			buildPhases = (
+				24E65CDD93B231E064A51723 /* [CP] Check Pods Manifest.lock */,
 				271D85D21F4EA1B80033C9BC /* Sources */,
 				271D85D31F4EA1B80033C9BC /* Frameworks */,
 				271D85D41F4EA1B80033C9BC /* Resources */,
+				BA2CB2135D06B360630FB052 /* [CP] Embed Pods Frameworks */,
+				5DE7C48906EAD98E2D5D968A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -277,6 +329,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				271D85C51F4EA1B80033C9BC /* LaunchScreen.storyboard in Resources */,
+				27CE09DE1F53FEA100A06081 /* GoogleService-Info.plist in Resources */,
 				271D85C21F4EA1B80033C9BC /* Assets.xcassets in Resources */,
 				271D85C01F4EA1B80033C9BC /* Main.storyboard in Resources */,
 			);
@@ -297,6 +350,158 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		24E65CDD93B231E064A51723 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FoodtopiaUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3DDA405CF963228219599F3F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FoodtopiaTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5DE7C48906EAD98E2D5D968A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FoodtopiaUITests/Pods-FoodtopiaUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7FE967E5559FEFB68762ADC2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Foodtopia-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9C98D128FFC708AB3ED326C0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FoodtopiaTests/Pods-FoodtopiaTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ACB666C114BDB93D39235898 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Foodtopia/Pods-Foodtopia-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B5D8B8CFDC02D8D60BD1901C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Foodtopia/Pods-Foodtopia-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Foodtopia/Pods-Foodtopia-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BA2CB2135D06B360630FB052 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FoodtopiaUITests/Pods-FoodtopiaUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D386AB84DA24A32A2F1D289C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FoodtopiaTests/Pods-FoodtopiaTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		271D85B11F4EA1B80033C9BC /* Sources */ = {
@@ -460,6 +665,7 @@
 		};
 		271D85E01F4EA1B80033C9BC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8E32193CE83DB0B179D47A5C /* Pods-Foodtopia.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Foodtopia/Info.plist;
@@ -472,6 +678,7 @@
 		};
 		271D85E11F4EA1B80033C9BC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DFA8592DE3EBDBA70A0CBDC3 /* Pods-Foodtopia.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Foodtopia/Info.plist;
@@ -484,6 +691,7 @@
 		};
 		271D85E31F4EA1B80033C9BC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FBF5C372BFBB32CA9D235210 /* Pods-FoodtopiaTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -498,6 +706,7 @@
 		};
 		271D85E41F4EA1B80033C9BC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7DF1F7BC6D2B1C3BC8503322 /* Pods-FoodtopiaTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -512,6 +721,7 @@
 		};
 		271D85E61F4EA1B80033C9BC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DBBFED79B7F9AF01B8D83772 /* Pods-FoodtopiaUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = FoodtopiaUITests/Info.plist;
@@ -525,6 +735,7 @@
 		};
 		271D85E71F4EA1B80033C9BC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB487E10F006E21F8527FF33 /* Pods-FoodtopiaUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = FoodtopiaUITests/Info.plist;
@@ -555,6 +766,7 @@
 				271D85E11F4EA1B80033C9BC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		271D85E21F4EA1B80033C9BC /* Build configuration list for PBXNativeTarget "FoodtopiaTests" */ = {
 			isa = XCConfigurationList;
@@ -563,6 +775,7 @@
 				271D85E41F4EA1B80033C9BC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		271D85E51F4EA1B80033C9BC /* Build configuration list for PBXNativeTarget "FoodtopiaUITests" */ = {
 			isa = XCConfigurationList;
@@ -571,6 +784,7 @@
 				271D85E71F4EA1B80033C9BC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

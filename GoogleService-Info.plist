@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>979788446169-ks1lpmcb8cjeps87jrec84b5m262rlhv.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.979788446169-ks1lpmcb8cjeps87jrec84b5m262rlhv</string>
+	<key>API_KEY</key>
+	<string>AIzaSyB5lvLJkecb0SJa77mZtpgbU8SuSTj-U78</string>
+	<key>GCM_SENDER_ID</key>
+	<string>979788446169</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>Somebody.Foodtopia</string>
+	<key>PROJECT_ID</key>
+	<string>foodopia-55178</string>
+	<key>STORAGE_BUCKET</key>
+	<string>foodopia-55178.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:979788446169:ios:22637b02f694e591</string>
+	<key>DATABASE_URL</key>
+	<string>https://foodopia-55178.firebaseio.com</string>
+</dict>
+</plist>
