@@ -1,0 +1,6 @@
+framework module Pods_FoodtopiaUITests {
+  umbrella header "Pods-FoodtopiaUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
