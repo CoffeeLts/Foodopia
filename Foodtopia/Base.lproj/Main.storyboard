@@ -18,19 +18,33 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="1" minimumInteritemSpacing="1" id="JIm-ZW-7Gg">
-                            <size key="itemSize" width="50" height="50"/>
+                            <size key="itemSize" width="165" height="151"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="xVe-yo-ueB" customClass="HomePageCell" customModule="Foodtopia" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="Cell" reuseIdentifier="Cell" id="xVe-yo-ueB" customClass="HomePageCell" customModule="Foodtopia" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="165" height="151"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="165" height="151"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AS3-uX-gNo">
+                                            <rect key="frame" x="0.0" y="0.0" width="165" height="151"/>
+                                        </imageView>
+                                    </subviews>
                                 </view>
+                                <constraints>
+                                    <constraint firstItem="AS3-uX-gNo" firstAttribute="top" secondItem="xVe-yo-ueB" secondAttribute="top" id="8Ad-5J-iOS"/>
+                                    <constraint firstAttribute="trailing" secondItem="AS3-uX-gNo" secondAttribute="trailing" id="A86-Em-sBX"/>
+                                    <constraint firstAttribute="bottom" secondItem="AS3-uX-gNo" secondAttribute="bottom" id="Hde-Ol-8jf"/>
+                                    <constraint firstItem="AS3-uX-gNo" firstAttribute="leading" secondItem="xVe-yo-ueB" secondAttribute="leading" id="cDZ-MS-bwV"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="imageView" destination="AS3-uX-gNo" id="9sz-np-Gyk"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
@@ -42,7 +56,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VGB-rd-HQv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2062" y="-317"/>
+            <point key="canvasLocation" x="2061.5999999999999" y="-317.09145427286359"/>
         </scene>
         <!--Second View Controller-->
         <scene sceneID="wg7-f3-ORb">

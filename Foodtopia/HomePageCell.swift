@@ -11,19 +11,17 @@ import UIKit
 class HomePageCell: UICollectionViewCell {
     
     
-    override init(frame: CGRect){
-        super.init(frame: frame)
-        
-        setupViews()
-    }
+    @IBOutlet weak var imageView: UIImageView!
     
-    required init(coder eDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        //custom logic goes here
         
     }
     
     func setupViews(){
         self.backgroundColor = UIColor.red
+        
     }
     
    

@@ -11,14 +11,20 @@ import UIKit
 private let reuseIdentifier = "Cell"
 
 class HomePage: UICollectionViewController , UICollectionViewDelegateFlowLayout{
-
+    
+//    Variables
+    var imageArray = ["img1", "img2", "img3", "img4", "img5", "img6", "img7"]
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
-        self.collectionView!.register(HomePageCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+//        self.collectionView!.register(HomePageCell.self, forCellWithReuseIdentifier: reuseIdentifier)
         
         setupCollectionView()
     }
@@ -62,14 +68,28 @@ class HomePage: UICollectionViewController , UICollectionViewDelegateFlowLayout{
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        return 12
+        return imageArray.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! HomePageCell
     
         // Configure the cell
-    
+        cell.imageView.image = UIImage(named: imageArray[indexPath.row])
+        
+        if (indexPath.row % 5) < 2 {
+            
+            cell.imageView.layer.insertSublayer(addLayer(imageView: cell.imageView, index: 2), at: 0)
+        }
+        else if (indexPath.row % 5) > 1 {
+            cell.imageView.layer.insertSublayer(addLayer(imageView: cell.imageView, index: 3), at: 0)
+            
+        }
+        else {
+            cell.imageView.layer.insertSublayer(addLayer(imageView: cell.imageView, index: 2), at: 0)
+
+        }
+        
         return cell
     }
     
@@ -84,16 +104,35 @@ class HomePage: UICollectionViewController , UICollectionViewDelegateFlowLayout{
         
         if (indexPath.row % 5) < 2 {
             // 0.5 = (0 + 1 + 0) / 2
-            return CGSize(width: w/2 - 1.5, height: (w/2 - 1.0) * 1.3)
+            return CGSize(width: w/2 - 1.5, height: w/2 - 1.5)
         }
         else if (indexPath.row % 5) > 1 {
             // 0.666 = (0 + 1 + 1 + 0) / 3
-            return CGSize(width: w/3 - 1.8, height: (w/3 - 1.0) * 1.3)
+            return CGSize(width: w/3 - 1.8, height: w/3 - 1.8)
         }
         else {
-            return CGSize(width: w/2 - 1.5, height: (w/2 - 1.0) * 1.3)
+            return CGSize(width: w/2 - 1.5, height: w/2 - 1.5)
         }
     }
+    
+    func addLayer(imageView: UIImageView, index: Int) -> CAGradientLayer {
+        imageView.layer.sublayers?.removeAll()
+        let w = Double(UIScreen.main.bounds.size.width)
+        
+        let color1 = UIColor(red: 255 / 255.0, green: 255 / 255.0, blue: 255 / 255.0, alpha: 0).cgColor
+        let color2 = UIColor(red: 255 / 255.0, green: 255 / 255.0, blue: 255 / 255.0, alpha: 0).cgColor
+        let color3 =  UIColor(red: 0 / 255.0, green: 0 / 255.0, blue: 0 / 255.0, alpha: 0.7).cgColor
+        
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.colors = [color1, color2, color3]
+        gradientLayer.locations = [ 0.0, 0.4, 1.0]
+        
+        gradientLayer.frame = CGRect(x: 0.0 , y: 0.0 , width: w/2 - 5, height: Double((w / CDouble(index) - 1) * 1.3))
+        
+        
+        return gradientLayer
+    }
+
 
     // MARK: UICollectionViewDelegate
 
