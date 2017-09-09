@@ -30,6 +30,7 @@ class HomePage: UICollectionViewController , UICollectionViewDelegateFlowLayout{
     }
 
     override func didReceiveMemoryWarning() {
+        
         super.didReceiveMemoryWarning()
        
         
