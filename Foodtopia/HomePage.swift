@@ -78,18 +78,18 @@ class HomePage: UICollectionViewController , UICollectionViewDelegateFlowLayout{
         // Configure the cell
         cell.imageView.image = UIImage(named: imageArray[indexPath.row])
         
-        if (indexPath.row % 5) < 2 {
-            
-            cell.imageView.layer.insertSublayer(addLayer(imageView: cell.imageView, index: 2), at: 0)
-        }
-        else if (indexPath.row % 5) > 1 {
-            cell.imageView.layer.insertSublayer(addLayer(imageView: cell.imageView, index: 3), at: 0)
-            
-        }
-        else {
-            cell.imageView.layer.insertSublayer(addLayer(imageView: cell.imageView, index: 2), at: 0)
-
-        }
+//        if (indexPath.row % 5) < 2 {
+//            
+//            cell.imageView.layer.insertSublayer(addLayer(imageView: cell.imageView, index: 2), at: 0)
+//        }
+//        else if (indexPath.row % 5) > 1 {
+//            cell.imageView.layer.insertSublayer(addLayer(imageView: cell.imageView, index: 3), at: 0)
+//            
+//        }
+//        else {
+//            cell.imageView.layer.insertSublayer(addLayer(imageView: cell.imageView, index: 2), at: 0)
+//
+//        }
         
         return cell
     }
@@ -99,6 +99,7 @@ class HomePage: UICollectionViewController , UICollectionViewDelegateFlowLayout{
     
     }
     
+    //Cell sizing
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         let w = Double(UIScreen.main.bounds.size.width)
