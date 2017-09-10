@@ -25,6 +25,7 @@ class Restaurant {
         self.phone = phone
         self.image = image
         self.menu = menu
+        
       
     }
 
