@@ -128,11 +128,7 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate {
         if segue.identifier == "restaurantDetailSegue" {
             if let indexPath = tableView.indexPathForSelectedRow{
                 let destinationController = segue.destination as! RestaurantDetailsViewController
-//                print(filteredData[indexPath.row].name + "  :  " + data[indexPath.row].name)
-                
                 destinationController.restaurant = (inSearchMode == true) ? filteredData[indexPath.row] : restaurants[indexPath.row]
-                
-//                destinationController.restaurant =
             }
         }
     }

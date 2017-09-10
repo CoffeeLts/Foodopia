@@ -14,8 +14,8 @@ class SecondViewController: UIViewController {
     @IBOutlet var secondView: UIView!
     @IBOutlet var firstImage: UIImageView!
     @IBOutlet var secondImage: UIImageView!
+    @IBOutlet var viewController: UIView!
     
-    var array = ["#FF0088", "#CC0000", "#886600"]
     var flipedCard = false
     var currentRandom : Restaurant?
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -24,6 +24,7 @@ class SecondViewController: UIViewController {
         super.viewDidLoad()
         firstImage.image = #imageLiteral(resourceName: "question_mark")
         currentRandom = RandomRestaurant.randomRestaurant(restaurants: appDelegate.restaurants)
+        exmple()
     }
 
     override func didReceiveMemoryWarning() {
@@ -69,6 +70,11 @@ class SecondViewController: UIViewController {
         }
     }
     
-    
+    func exmple () {
+        self.viewController.layer.shadowColor = UIColor.black.cgColor
+        self.viewController.layer.shadowOpacity = 0.6
+        self.viewController.layer.shadowOffset = CGSize(width: -5, height: 3)
+        self.viewController.layer.shadowRadius = 1
+    }
 }
 
