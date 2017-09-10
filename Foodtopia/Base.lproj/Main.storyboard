@@ -5,7 +5,7 @@
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -53,6 +53,9 @@
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" id="xQh-Su-6gS"/>
+                    <connections>
+                        <segue destination="iSf-7x-e7Z" kind="show" identifier="restaurantDetailSegue" id="2XP-gi-fCf"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VGB-rd-HQv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -206,6 +209,30 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vfh-NN-LQb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2958" y="-317"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="5Cu-im-qS8">
+            <objects>
+                <viewController id="iSf-7x-e7Z" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="OAx-ir-hp5"/>
+                        <viewControllerLayoutGuide type="bottom" id="VLs-JG-K7Z"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hg3-da-va0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B2z-gM-2u9">
+                                <rect key="frame" x="67" y="100" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ybi-fP-ZQP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2994" y="152"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">

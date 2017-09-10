@@ -20,7 +20,7 @@ class HomePageCell: UICollectionViewCell {
     }
     
     func setupViews(){
-        self.backgroundColor = UIColor.red
+       
         
     }
     

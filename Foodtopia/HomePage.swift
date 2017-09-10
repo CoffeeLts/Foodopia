@@ -13,6 +13,10 @@ private let reuseIdentifier = "Cell"
 class HomePage: UICollectionViewController , UICollectionViewDelegateFlowLayout{
     
 //    Variables
+    
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    
+    
     var imageArray = ["img1", "img2", "img3", "img4", "img5", "img6", "img7"]
     
     
@@ -27,9 +31,11 @@ class HomePage: UICollectionViewController , UICollectionViewDelegateFlowLayout{
 //        self.collectionView!.register(HomePageCell.self, forCellWithReuseIdentifier: reuseIdentifier)
         
         setupCollectionView()
+        
     }
 
     override func didReceiveMemoryWarning() {
+        
         super.didReceiveMemoryWarning()
        
         
@@ -68,7 +74,8 @@ class HomePage: UICollectionViewController , UICollectionViewDelegateFlowLayout{
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        return imageArray.count
+        
+        return self.appDelegate.restaurants.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -77,27 +84,23 @@ class HomePage: UICollectionViewController , UICollectionViewDelegateFlowLayout{
         // Configure the cell
         cell.imageView.image = UIImage(named: imageArray[indexPath.row])
         
-        if (indexPath.row % 5) < 2 {
-            
-            cell.imageView.layer.insertSublayer(addLayer(imageView: cell.imageView, index: 2), at: 0)
-        }
-        else if (indexPath.row % 5) > 1 {
-            cell.imageView.layer.insertSublayer(addLayer(imageView: cell.imageView, index: 3), at: 0)
-            
-        }
-        else {
-            cell.imageView.layer.insertSublayer(addLayer(imageView: cell.imageView, index: 2), at: 0)
-
-        }
+//        if (indexPath.row % 5) < 2 {
+//            
+//            cell.imageView.layer.insertSublayer(addLayer(imageView: cell.imageView, index: 2), at: 0)
+//        }
+//        else if (indexPath.row % 5) > 1 {
+//            cell.imageView.layer.insertSublayer(addLayer(imageView: cell.imageView, index: 3), at: 0)
+//            
+//        }
+//        else {
+//            cell.imageView.layer.insertSublayer(addLayer(imageView: cell.imageView, index: 2), at: 0)
+//
+//        }
         
         return cell
     }
     
-   override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("IndexPath = \(indexPath.item)")
-    
-    }
-    
+    //Cell sizing
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         let w = Double(UIScreen.main.bounds.size.width)
@@ -133,7 +136,30 @@ class HomePage: UICollectionViewController , UICollectionViewDelegateFlowLayout{
         return gradientLayer
     }
 
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("IndexPath = \(indexPath.item)")
+        showDetails(indexPath: indexPath.row)
+    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "restaurantDetailSegue" {
+            if let indexPath = self.collectionView?.indexPathsForSelectedItems {
+                let destinationController = segue.destination as! RestaurantDetailsViewController
+//                destinationController.restaurant =
+            }
 
+        }
+    }
+    
+    func showDetails(indexPath: Int){
+        self.performSegue(withIdentifier: "restaurantDetailSegue", sender: indexPath)
+    }
+
+    
+    
+    
     // MARK: UICollectionViewDelegate
 
     /*
