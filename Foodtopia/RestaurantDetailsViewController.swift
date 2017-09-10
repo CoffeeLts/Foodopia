@@ -12,6 +12,10 @@ class RestaurantDetailsViewController: UIViewController {
 
     @IBOutlet var mainScrollView: UIScrollView!
     
+    @IBOutlet var phoneNumber: UILabel!
+    @IBOutlet var address: UILabel!
+    @IBOutlet var name: UILabel!
+    
     var imagesArray = [UIImage]()
     var restaurant: Restaurant?
     
@@ -20,24 +24,43 @@ class RestaurantDetailsViewController: UIViewController {
         super.viewDidLoad()
         imagesArray = [UIImage(named: restaurant!.image)!, UIImage(named: restaurant!.menu)!]
         
+        //mainScrollView.frame = CGRect(x: 0, y: 0, width: self.view.bounds.width, height: self.view.bounds.width)
         
-//        for i in 0..<imagesArray.count{
-//            
-//            let imageView = UIImageView()
-//            imageView.image = imagesArray[i]
-//            
-//            let xPosition = self.view.frame.width * CGFloat(i)
-//            imageView.frame = CGRect(x: xPosition, y: 0, width: self.mainScrollView.frame.width, height: self.mainScrollView.frame.height)
-//            
-//            mainScrollView.contentSize.width = mainScrollView.frame.width * CGFloat(i + 1)
-//            
-//            
-//            
-//            mainScrollView.addSubview(imageView)
-//        }
+        mainScrollView.frame.size.width = UIScreen.main.bounds.width
+        mainScrollView.frame.size.height = UIScreen.main.bounds.width
+        mainScrollView.backgroundColor = UIColor.black
+        mainScrollView.isPagingEnabled = true
+        self.automaticallyAdjustsScrollViewInsets = false
         
         
+        mainScrollView.contentSize = CGSize (width: self.view.bounds.width * 2.0, height: UIScreen.main.bounds.width)
+        print("a + \(mainScrollView.contentSize.width)")
+        print("b + \(UIScreen.main.bounds.width)")
+        print("a + \(self.view.bounds.width)")
+       
+        mainScrollView.showsHorizontalScrollIndicator = false
+        
+        loadImages()
+
+        
+        self.name.text = restaurant?.name
+        self.address.text  = restaurant?.location
+        self.phoneNumber.text = restaurant?.phone
     }
+    
+    func loadImages(){
+        for (index, images) in imagesArray.enumerated() {
+            let imageView = UIImageView(frame: CGRect( x: CGFloat(index) * view.bounds.size.width, y: 0, width: self.view.bounds.width, height: mainScrollView.contentSize.height ))
+            
+            imageView.image = images
+            imageView.contentMode = .scaleAspectFit
+            mainScrollView.addSubview(imageView)
+            print(imageView.frame.height)
+        
+            
+        }
+    }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -45,14 +68,6 @@ class RestaurantDetailsViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    
 
 }
