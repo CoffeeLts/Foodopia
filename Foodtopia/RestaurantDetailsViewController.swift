@@ -13,25 +13,28 @@ class RestaurantDetailsViewController: UIViewController {
     @IBOutlet var mainScrollView: UIScrollView!
     
     var imagesArray = [UIImage]()
+    var restaurant: Restaurant?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        imagesArray = [#imageLiteral(resourceName: "zebraMenu"), #imageLiteral(resourceName: "DonmealMenu"), #imageLiteral(resourceName: "Donmeal"),#imageLiteral(resourceName: "zebra")]
+        imagesArray = [UIImage(named: restaurant!.image)!, UIImage(named: restaurant!.menu)!]
         
-        for i in 0..<imagesArray.count{
-            
-            let imageView = UIImageView()
-            imageView.image = imagesArray[i]
-            
-            let xPosition = self.view.frame.width * CGFloat(i)
-            imageView.frame = CGRect(x: xPosition, y: 0, width: self.mainScrollView.frame.width, height: self.mainScrollView.frame.height)
-            
-            mainScrollView.contentSize.width = mainScrollView.frame.width * CGFloat(i + 1)
-            
-            
-            
-            mainScrollView.addSubview(imageView)
-        }
+        
+//        for i in 0..<imagesArray.count{
+//            
+//            let imageView = UIImageView()
+//            imageView.image = imagesArray[i]
+//            
+//            let xPosition = self.view.frame.width * CGFloat(i)
+//            imageView.frame = CGRect(x: xPosition, y: 0, width: self.mainScrollView.frame.width, height: self.mainScrollView.frame.height)
+//            
+//            mainScrollView.contentSize.width = mainScrollView.frame.width * CGFloat(i + 1)
+//            
+//            
+//            
+//            mainScrollView.addSubview(imageView)
+//        }
         
         
     }
