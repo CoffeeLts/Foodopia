@@ -56,6 +56,7 @@
                     <navigationItem key="navigationItem" id="xQh-Su-6gS"/>
                     <connections>
                         <segue destination="iSf-7x-e7Z" kind="show" identifier="restaurantDetailSegue" id="2XP-gi-fCf"/>
+                        <segue destination="khU-n4-Jq9" kind="presentation" identifier="searchView" id="ZjL-Fx-MI7"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VGB-rd-HQv" userLabel="First Responder" sceneMemberID="firstResponder"/>

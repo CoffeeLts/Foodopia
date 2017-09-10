@@ -10,10 +10,10 @@ import UIKit
 
 private let reuseIdentifier = "Cell"
 
-class HomePage: UICollectionViewController , UICollectionViewDelegateFlowLayout{
+class HomePage: UICollectionViewController , UICollectionViewDelegateFlowLayout, UISearchBarDelegate{
     
 //    Variables
-    
+    lazy var searchBar:UISearchBar = UISearchBar(frame: CGRect(x: 0, y: 0, width: 200, height: 20))
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
     
@@ -25,19 +25,41 @@ class HomePage: UICollectionViewController , UICollectionViewDelegateFlowLayout{
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-//        self.collectionView!.register(HomePageCell.self, forCellWithReuseIdentifier: reuseIdentifier)
         
         
-        for i in 0...7 {
-            restaurants.append(appDelegate.restaurants[i])
+        
+        for _ in 0..<12 {
+            restaurants.append(RandomRestaurant.randomRestaurant(restaurants: appDelegate.restaurants) )
             
         }
-  
+        createSearchBar()
+    }
+    
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+          performSegue(withIdentifier: "searchView", sender: self)
+    }
+    
+//    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+//       
+//            performSegue(withIdentifier: "searchView", sender: self)
+//        
+//    }
+    
+    
+    func createSearchBar() {
+        searchBar = UISearchBar()
+        
+        
+        searchBar.showsScopeBar = false
+        searchBar.placeholder = "Enter your search here!"
+     
+        searchBar.delegate = self
+        
+        self.navigationItem.titleView = searchBar
+        
     }
 
+    
     override func didReceiveMemoryWarning() {
         
         super.didReceiveMemoryWarning()

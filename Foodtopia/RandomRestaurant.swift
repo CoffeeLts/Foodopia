@@ -11,7 +11,7 @@ import UIKit
 
 class RandomRestaurant {
     
-    func randomRestaurant(restaurants: [Restaurant]) -> Restaurant {
+    static func randomRestaurant(restaurants: [Restaurant]) -> Restaurant {
         let restaurant = restaurants[Int(arc4random_uniform(UInt32(restaurants.count)))]
         
         return restaurant

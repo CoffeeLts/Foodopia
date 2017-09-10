@@ -68,12 +68,8 @@ class SecondViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showDetails" {
-            
-                let destinationController = segue.destination as! ShowDetailViewController
-                destinationController.text = "123"
-                
-       
-            
+            let destinationController = segue.destination as! ShowDetailViewController
+            destinationController.text = "123"
         }
     }
     
