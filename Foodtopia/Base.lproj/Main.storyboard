@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -120,7 +120,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2061.5999999999999" y="358.4707646176912"/>
+            <point key="canvasLocation" x="2359" y="609"/>
         </scene>
         <!--Search Table View Controller-->
         <scene sceneID="Pz9-6W-07U">
@@ -210,10 +210,10 @@
             </objects>
             <point key="canvasLocation" x="2958" y="-317"/>
         </scene>
-        <!--View Controller-->
+        <!--Restaurant Details View Controller-->
         <scene sceneID="5Cu-im-qS8">
             <objects>
-                <viewController id="iSf-7x-e7Z" sceneMemberID="viewController">
+                <viewController id="iSf-7x-e7Z" customClass="RestaurantDetailsViewController" customModule="Foodtopia" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="OAx-ir-hp5"/>
                         <viewControllerLayoutGuide type="bottom" id="VLs-JG-K7Z"/>
@@ -232,7 +232,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ybi-fP-ZQP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2994" y="152"/>
+            <point key="canvasLocation" x="3537" y="507"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
