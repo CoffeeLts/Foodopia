@@ -32,8 +32,8 @@ class SecondViewController: UIViewController {
     
     @IBAction func randomButton(_ sender: UIButton) {
         
-        DispatchQueue.main.async {
-            for i in 0..<10 {
+//        DispatchQueue.main.async {
+//            for _ in 0..<10 {
                 self.flipedCard = !self.flipedCard
                 
                 let fromView = self.flipedCard ? self.firstView : self.secondView
@@ -41,8 +41,8 @@ class SecondViewController: UIViewController {
 
                 
                 UIView.transition(from: fromView!, to: toView!, duration: 0.5, options: [.transitionCrossDissolve, .showHideTransitionViews])
-            }
-        }
+//            }
+//        }
         
         
     }

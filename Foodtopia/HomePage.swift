@@ -19,7 +19,7 @@ class HomePage: UICollectionViewController , UICollectionViewDelegateFlowLayout{
     
     var imageArray = ["img1", "img2", "img3", "img4", "img5", "img6", "img7"]
     
-    
+    var restaurants: [Restaurant] = []
     
     
     override func viewDidLoad() {
@@ -30,8 +30,12 @@ class HomePage: UICollectionViewController , UICollectionViewDelegateFlowLayout{
 
 //        self.collectionView!.register(HomePageCell.self, forCellWithReuseIdentifier: reuseIdentifier)
         
-        setupCollectionView()
         
+        for i in 0...7 {
+            restaurants.append(appDelegate.restaurants[i])
+            
+        }
+  
     }
 
     override func didReceiveMemoryWarning() {
@@ -41,30 +45,6 @@ class HomePage: UICollectionViewController , UICollectionViewDelegateFlowLayout{
         
     }
     
-    
-    func setupCollectionView(){
-        let screenHeight:CGFloat = UIScreen.main.bounds.height
-        
-        print(screenHeight)
-        print(view.bounds.height)
-
-        //let layout = collectionView!.collectionViewLayout as! UICollectionViewFlowLayout
-
-        
-    }
-    
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
-    }
-    */
-
-    // MARK: UICollectionViewDataSource
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         // #warning Incomplete implementation, return the number of sections
@@ -75,15 +55,18 @@ class HomePage: UICollectionViewController , UICollectionViewDelegateFlowLayout{
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
         
-        return self.appDelegate.restaurants.count
+        return self.restaurants.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! HomePageCell
     
         // Configure the cell
-        cell.imageView.image = UIImage(named: imageArray[indexPath.row])
+        print("B")
+        print(restaurants[indexPath.item].image)
         
+        cell.imageView.image = UIImage(named: self.restaurants[indexPath.item].image)
+        print(restaurants[indexPath.item].image)
 //        if (indexPath.row % 5) < 2 {
 //            
 //            cell.imageView.layer.insertSublayer(addLayer(imageView: cell.imageView, index: 2), at: 0)
@@ -139,21 +122,22 @@ class HomePage: UICollectionViewController , UICollectionViewDelegateFlowLayout{
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("IndexPath = \(indexPath.item)")
-        showDetails(indexPath: indexPath.row)
+        showDetails(indexPath: indexPath)
     }
-    
+
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "restaurantDetailSegue" {
-            if let indexPath = self.collectionView?.indexPathsForSelectedItems {
+            if let indexPath = sender as? IndexPath {
                 let destinationController = segue.destination as! RestaurantDetailsViewController
-//                destinationController.restaurant =
+                //destinationController.restaurant =
+                destinationController.restaurant = restaurants[indexPath.item]
             }
 
         }
     }
     
-    func showDetails(indexPath: Int){
+    func showDetails(indexPath: IndexPath){
         self.performSegue(withIdentifier: "restaurantDetailSegue", sender: indexPath)
     }
 

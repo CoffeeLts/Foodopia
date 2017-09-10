@@ -121,10 +121,10 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showDetails" {
             if let indexPath = tableView.indexPathForSelectedRow{
-                let destinationController = segue.destination as! ShowDetailViewController
-                destinationController.text = (inSearchMode == true) ? filteredData[indexPath.row] : data[indexPath.row]
+                let destinationController = segue.destination as! RestaurantDetailsViewController
+//                destinationController.text = (inSearchMode == true) ? filteredData[indexPath.row] : data[indexPath.row]
                 
-//                destinationController.label.text = "a"
+//                destinationController.restaurant =
             }
         }
     }
