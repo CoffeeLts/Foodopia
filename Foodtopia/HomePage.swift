@@ -13,6 +13,10 @@ private let reuseIdentifier = "Cell"
 class HomePage: UICollectionViewController , UICollectionViewDelegateFlowLayout{
     
 //    Variables
+    
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    
+    
     var imageArray = ["img1", "img2", "img3", "img4", "img5", "img6", "img7"]
     
     
@@ -27,6 +31,7 @@ class HomePage: UICollectionViewController , UICollectionViewDelegateFlowLayout{
 //        self.collectionView!.register(HomePageCell.self, forCellWithReuseIdentifier: reuseIdentifier)
         
         setupCollectionView()
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -69,7 +74,8 @@ class HomePage: UICollectionViewController , UICollectionViewDelegateFlowLayout{
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        return imageArray.count
+        
+        return self.appDelegate.restaurants.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -92,11 +98,6 @@ class HomePage: UICollectionViewController , UICollectionViewDelegateFlowLayout{
 //        }
         
         return cell
-    }
-    
-   override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("IndexPath = \(indexPath.item)")
-    
     }
     
     //Cell sizing
@@ -135,7 +136,30 @@ class HomePage: UICollectionViewController , UICollectionViewDelegateFlowLayout{
         return gradientLayer
     }
 
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("IndexPath = \(indexPath.item)")
+        showDetails(indexPath: indexPath.row)
+    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "restaurantDetailSegue" {
+            if let indexPath = self.collectionView?.indexPathsForSelectedItems {
+                let destinationController = segue.destination as! RestaurantDetailsViewController
+//                destinationController.restaurant =
+            }
 
+        }
+    }
+    
+    func showDetails(indexPath: Int){
+        self.performSegue(withIdentifier: "restaurantDetailSegue", sender: indexPath)
+    }
+
+    
+    
+    
     // MARK: UICollectionViewDelegate
 
     /*

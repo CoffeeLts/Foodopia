@@ -14,7 +14,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     
-    
+    var restaurants: [Restaurant] = [Restaurant("黑盒子丼飯鐵板燒","台中市西屯區文華路115號","04 2708 4575","blackbox", "blackboxMenu"),
+                                     Restaurant("九湯屋日本拉麵(逢甲店)","台中市西屯區文華路175號","0971-233678","jiutang","jiutangMenu"),
+                                     Restaurant("黑盒子丼飯鐵板燒","台中市西屯區文華路115號","04 2708 4575","blackbox","jiutangMenu"),
+                                     Restaurant("黑盒子丼飯鐵板燒","台中市西屯區文華路115號","04 2708 4575","blackbox","jiutangMenu"),
+                                     Restaurant("黑盒子丼飯鐵板燒","台中市西屯區文華路115號","04 2708 4575","blackbox","jiutangMenu"),
+                                     Restaurant("黑盒子丼飯鐵板燒","台中市西屯區文華路115號","04 2708 4575","blackbox","jiutangMenu"),
+                                     Restaurant("黑盒子丼飯鐵板燒","台中市西屯區文華路115號","04 2708 4575","blackbox","jiutangMenu")
+    ]
     
     
 
@@ -24,14 +31,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
 //        init(name: String, location: String, phone: String, image: String) {
 
-        var restaurants: [Restaurant] = [Restaurant("黑盒子丼飯鐵板燒","台中市西屯區文華路115號","04 2708 4575","blackbox"),
-                                    Restaurant("九湯屋日本拉麵(逢甲店)","台中市西屯區文華路175號","0971-233678","jiutang"),
-                                    Restaurant("黑盒子丼飯鐵板燒","台中市西屯區文華路115號","04 2708 4575","blackbox"),
-                                    Restaurant("黑盒子丼飯鐵板燒","台中市西屯區文華路115號","04 2708 4575","blackbox"),
-                                    Restaurant("黑盒子丼飯鐵板燒","台中市西屯區文華路115號","04 2708 4575","blackbox"),
-                                    Restaurant("黑盒子丼飯鐵板燒","台中市西屯區文華路115號","04 2708 4575","blackbox"),
-                                    Restaurant("黑盒子丼飯鐵板燒","台中市西屯區文華路115號","04 2708 4575","blackbox"),
-                                    Restaurant("黑盒子丼飯鐵板燒","台中市西屯區文華路115號","04 2708 4575","blackbox")]
+        
         
         return true
     }
