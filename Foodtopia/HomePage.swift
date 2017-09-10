@@ -17,6 +17,7 @@ class HomePage: UICollectionViewController , UICollectionViewDelegateFlowLayout,
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
     
+    
     var imageArray = ["img1", "img2", "img3", "img4", "img5", "img6", "img7"]
     
     var restaurants: [Restaurant] = []
@@ -88,19 +89,23 @@ class HomePage: UICollectionViewController , UICollectionViewDelegateFlowLayout,
         
         cell.imageView.image = UIImage(named: self.restaurants[indexPath.item].image)
         print(restaurants[indexPath.item].name)
-//        if (indexPath.row % 5) < 2 {
-//            
-//            cell.imageView.layer.insertSublayer(addLayer(imageView: cell.imageView, index: 2), at: 0)
-//        }
-//        else if (indexPath.row % 5) > 1 {
-//            cell.imageView.layer.insertSublayer(addLayer(imageView: cell.imageView, index: 3), at: 0)
-//            
-//        }
-//        else {
-//            cell.imageView.layer.insertSublayer(addLayer(imageView: cell.imageView, index: 2), at: 0)
-//
-//        }
         
+        print(cell.bounds.width)
+        print(cell.bounds.height)
+
+//        let overlay: UIView = UIView(frame: CGRect(x: 0, y: cell.bounds.height * 0.8 , width: cell.bounds.width, height: cell.bounds.height))
+//        overlay.backgroundColor = UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 0.4)
+//        cell.imageView.addSubview(overlay)
+        
+        cell.labelText = restaurants[indexPath.item].name
+        cell.setupViews(cellWidth: cell.bounds.width, cellHeight: cell.bounds.height)
+        
+        
+        
+        
+        
+        
+//        cell.imageView.layer.insertSublayer(addLayer(imageView: cell.imageView, cellWidth: cell.bounds.width, cellHeight: cell.bounds.height ), at: 0)
         return cell
     }
     
@@ -122,19 +127,19 @@ class HomePage: UICollectionViewController , UICollectionViewDelegateFlowLayout,
         }
     }
     
-    func addLayer(imageView: UIImageView, index: Int) -> CAGradientLayer {
+    func addLayer(imageView: UIImageView, cellWidth: CGFloat, cellHeight: CGFloat) -> CAGradientLayer {
         imageView.layer.sublayers?.removeAll()
-        let w = Double(UIScreen.main.bounds.size.width)
+        
         
         let color1 = UIColor(red: 255 / 255.0, green: 255 / 255.0, blue: 255 / 255.0, alpha: 0).cgColor
         let color2 = UIColor(red: 255 / 255.0, green: 255 / 255.0, blue: 255 / 255.0, alpha: 0).cgColor
-        let color3 =  UIColor(red: 0 / 255.0, green: 0 / 255.0, blue: 0 / 255.0, alpha: 0.7).cgColor
+        let color3 =  UIColor(red: 0 / 255.0, green: 0 / 255.0, blue: 0 / 255.0, alpha: 0.8).cgColor
         
         let gradientLayer = CAGradientLayer()
         gradientLayer.colors = [color1, color2, color3]
-        gradientLayer.locations = [ 0.0, 0.4, 1.0]
+        gradientLayer.locations = [ 0.4, 0.7, 1.0]
         
-        gradientLayer.frame = CGRect(x: 0.0 , y: 0.0 , width: w/2 - 5, height: Double((w / CDouble(index) - 1) * 1.3))
+        gradientLayer.frame = CGRect(x: 0.0 , y: 0.0 , width: cellWidth, height: cellHeight)
         
         
         return gradientLayer
@@ -161,39 +166,4 @@ class HomePage: UICollectionViewController , UICollectionViewDelegateFlowLayout,
     func showDetails(indexPath: IndexPath){
         self.performSegue(withIdentifier: "restaurantDetailSegue", sender: indexPath)
     }
-
-    
-    
-    
-    // MARK: UICollectionViewDelegate
-
-    /*
-    // Uncomment this method to specify if the specified item should be highlighted during tracking
-    override func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    */
-
-    /*
-    // Uncomment this method to specify if the specified item should be selected
-    override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    */
-
-    /*
-    // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-    override func collectionView(_ collectionView: UICollectionView, shouldShowMenuForItemAt indexPath: IndexPath) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, canPerformAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, performAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) {
-    
-    }
-    */
-
 }
