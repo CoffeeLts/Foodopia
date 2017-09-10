@@ -26,12 +26,11 @@ class HomePage: UICollectionViewController , UICollectionViewDelegateFlowLayout,
         super.viewDidLoad()
 
         
-        
-        
-        for _ in 0..<12 {
-            restaurants.append(RandomRestaurant.randomRestaurant(restaurants: appDelegate.restaurants) )
-            
-        }
+        restaurants = RandomRestaurant.randomUniqueRestaurant(restaurants: appDelegate.restaurants, range: 12)
+//        for _ in 0..<12 {
+//            restaurants.append(RandomRestaurant.randomRestaurant(restaurants: appDelegate.restaurants) )
+//            
+//        }
         createSearchBar()
     }
     
@@ -84,11 +83,11 @@ class HomePage: UICollectionViewController , UICollectionViewDelegateFlowLayout,
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! HomePageCell
     
         // Configure the cell
-        print("B")
+        
         print(restaurants[indexPath.item].image)
         
         cell.imageView.image = UIImage(named: self.restaurants[indexPath.item].image)
-        print(restaurants[indexPath.item].image)
+        print(restaurants[indexPath.item].name)
 //        if (indexPath.row % 5) < 2 {
 //            
 //            cell.imageView.layer.insertSublayer(addLayer(imageView: cell.imageView, index: 2), at: 0)

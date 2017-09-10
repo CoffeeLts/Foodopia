@@ -200,7 +200,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="label" destination="TJD-fd-yom" id="bie-aO-Il1"/>
-                                    <segue destination="Iro-pq-95J" kind="show" identifier="showDetails" id="4pI-uc-tIl"/>
+                                    <segue destination="iSf-7x-e7Z" kind="show" identifier="restaurantDetailSegue" id="2lP-3o-3c3"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -274,7 +274,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sSR-Qm-Sf2">
-                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="noM-ci-zYy">
                                         <rect key="frame" x="0.0" y="68" width="375" height="128"/>
@@ -349,7 +349,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ybi-fP-ZQP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3536" y="506.89655172413796"/>
+            <point key="canvasLocation" x="4177" y="454"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -416,6 +416,6 @@
         <image name="second" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="5M6-gB-iOy"/>
+        <segue reference="2lP-3o-3c3"/>
     </inferredMetricsTieBreakers>
 </document>

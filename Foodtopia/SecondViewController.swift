@@ -16,15 +16,14 @@ class SecondViewController: UIViewController {
     @IBOutlet var secondImage: UIImageView!
     
     var array = ["#FF0088", "#CC0000", "#886600"]
-    
-    
     var flipedCard = false
+    var currentRandom : Restaurant?
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         firstImage.image = #imageLiteral(resourceName: "question_mark")
-//        firstImage.backgroundColor = UIColor(red: 0xFF/255, green: 0x00/255, blue: 0x88/255, alpha: 1)
+        currentRandom = RandomRestaurant.randomRestaurant(restaurants: appDelegate.restaurants)
     }
 
     override func didReceiveMemoryWarning() {
@@ -40,20 +39,17 @@ class SecondViewController: UIViewController {
         if self.flipedCard == true {
             fromView = self.firstView
             toView = self.secondView
-            firstImage.image = #imageLiteral(resourceName: "img2")
-            secondImage.image = #imageLiteral(resourceName: "img1")
-//            firstImage.backgroundColor = UIColor(red: 0xCC/255, green: 0x00/255, blue: 0x00/255, alpha: 1)
-//            secondImage.backgroundColor = UIColor(red: 0xFF/255, green: 0x00/255, blue: 0x88/255, alpha: 1)
+            firstImage.image = UIImage(named: (currentRandom?.image)!)
+            secondImage.image = UIImage(named: (currentRandom?.image)!)
         }else {
             fromView = self.secondView
             toView = self.firstView
-            firstImage.image = #imageLiteral(resourceName: "img2")
-            secondImage.image = #imageLiteral(resourceName: "img1")
-//            secondImage.backgroundColor = UIColor(red: 0xFF/255, green: 0x00/255, blue: 0x88/255, alpha: 1)
-//            firstImage.backgroundColor = UIColor(red: 0xCC/255, green: 0x00/255, blue: 0x00/255, alpha: 1)
+            firstImage.image = UIImage(named: (currentRandom?.image)!)
+            secondImage.image = UIImage(named: (currentRandom?.image)!)
         }
         
-            
+        currentRandom = RandomRestaurant.randomRestaurant(restaurants: appDelegate.restaurants)
+        
         UIView.transition(from: fromView, to: toView, duration: 0.5, options: [.transitionCrossDissolve, .showHideTransitionViews])
     }
 

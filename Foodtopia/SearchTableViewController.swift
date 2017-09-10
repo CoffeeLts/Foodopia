@@ -10,14 +10,19 @@ import UIKit
 
 class SearchTableViewController: UITableViewController, UISearchBarDelegate {
     lazy var searchBar:UISearchBar = UISearchBar(frame: CGRect(x: 0, y: 0, width: 200, height: 20))
-    var data = ["dogs", "Cats", "Goofs", "Apples", "Frogs", "Orange"]
+    var restaurants: [Restaurant] = []
     
-    var filteredData = [String]()
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    
+    var filteredData: [Restaurant] = []
     var inSearchMode = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        for i in 0..<15 {
+            restaurants.append(appDelegate.restaurants[i])
+        }
         createSearchBar()
     }
     
@@ -65,7 +70,7 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate {
             return filteredData.count
         }
         
-        return data.count
+        return restaurants.count
 
     }
     
@@ -75,9 +80,9 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate {
             let text: String!
             
             if inSearchMode {
-                text = filteredData[indexPath.row]
+                text = filteredData[indexPath.row].name
             } else {
-                text = data[indexPath.row]
+                text = restaurants[indexPath.row].name
             }
             cell.configureCell(text: text)
             
@@ -110,7 +115,8 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate {
             }
         } else {
             inSearchMode = true
-            filteredData = data.filter({$0 == searchBar.text})
+            
+            filter(inputText: searchBar.text!)
             
             DispatchQueue.main.async{
                 self.tableView.reloadData()
@@ -119,13 +125,26 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "showDetails" {
+        if segue.identifier == "restaurantDetailSegue" {
             if let indexPath = tableView.indexPathForSelectedRow{
                 let destinationController = segue.destination as! RestaurantDetailsViewController
-//                destinationController.text = (inSearchMode == true) ? filteredData[indexPath.row] : data[indexPath.row]
+//                print(filteredData[indexPath.row].name + "  :  " + data[indexPath.row].name)
+                
+                destinationController.restaurant = (inSearchMode == true) ? filteredData[indexPath.row] : restaurants[indexPath.row]
                 
 //                destinationController.restaurant =
             }
         }
+    }
+    
+    func filter(inputText: String) {
+        self.filteredData.removeAll()
+        
+        for items in appDelegate.restaurants{
+            if items.name.range(of: inputText) != nil {
+                self.filteredData.append(items)
+            }
+        }
+        
     }
 }
