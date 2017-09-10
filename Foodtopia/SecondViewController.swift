@@ -20,6 +20,8 @@ class SecondViewController: UIViewController {
     var currentRandom : Restaurant?
     var tempRestaurant : Restaurant?
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    var overlay:UIView?
+    var label:UILabel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,13 +42,13 @@ class SecondViewController: UIViewController {
         var toView : UIView
         
         if self.flipedCard == true {
-            fromView = self.firstView
-            toView = self.secondView
+            fromView = self.firstView//returnViewWithLayers(self.firstView)
+            toView = self.secondView//returnViewWithLayers(self.secondView)
             firstImage.image = UIImage(named: (currentRandom?.image)!)
             secondImage.image = UIImage(named: (currentRandom?.image)!)
         }else {
-            fromView = self.secondView
-            toView = self.firstView
+            fromView = self.secondView//returnViewWithLayers(self.secondView)
+            toView = self.firstView//returnViewWithLayers(self.firstView)
             firstImage.image = UIImage(named: (currentRandom?.image)!)
             secondImage.image = UIImage(named: (currentRandom?.image)!)
         }
@@ -74,6 +76,60 @@ class SecondViewController: UIViewController {
             
             
         }
+    }
+    
+    func returnViewWithLayers(_ view: UIView) -> UIView{
+//        view.subviews.removeAll()
+        if(overlay != nil) && (label != nil){
+            if view.subviews.contains(self.overlay!) && view.subviews.contains(self.label!) {
+                self.overlay?.removeFromSuperview() // Remove it
+                self.label?.removeFromSuperview()
+                print("OVERLAYis removed")
+            }
+        }
+        
+        
+        let viewHeight = firstView.frame.height
+        let viewWidth = firstView.frame.width
+        
+        let yPoint = viewHeight * 0.8
+    
+        self.overlay = UIView(frame: CGRect(x: 0, y: yPoint, width: viewWidth, height: viewHeight - yPoint))
+        overlay?.backgroundColor = UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 0.4)
+        if view.subviews.contains(overlay!) {
+            overlay?.removeFromSuperview() // Remove it
+              print("OVERLAYis removed")
+        }
+     
+        
+        view.addSubview(overlay!)
+        
+//        
+//        let overlayLayer:CALayer = overlay.layer
+//        view.layer.addSublayer(overlayLayer)
+        
+        
+        label = UILabel(frame: CGRect(x: 0, y: yPoint, width: viewWidth, height: viewHeight - yPoint))
+        label?.textColor = UIColor.white
+        label?.textAlignment = .center
+        label?.font = UIFont(name: (label?.font.fontName)!, size: 12)
+        label?.text = tempRestaurant?.name
+        
+
+       
+        view.addSubview(label!)
+        
+//        let labelLayer:CALayer = label.layer
+//        view.layer.addSublayer(labelLayer)
+
+        
+//        view.addSubview(label)
+        
+        
+        
+        view.addConstraintsWithFormat("H:|-16-[v0]-16-|", views: label!)
+        view.addConstraintsWithFormat("V:|-\(yPoint)-[v0]-0-|", views: label!)
+        return view
     }
     
     func exmple () {
