@@ -18,12 +18,14 @@ class SecondViewController: UIViewController {
     
     var flipedCard = false
     var currentRandom : Restaurant?
+    var tempRestaurant : Restaurant?
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
     override func viewDidLoad() {
         super.viewDidLoad()
         firstImage.image = #imageLiteral(resourceName: "question_mark")
         currentRandom = RandomRestaurant.randomRestaurant(restaurants: appDelegate.restaurants)
+        tempRestaurant = currentRandom
         exmple()
     }
 
@@ -48,7 +50,7 @@ class SecondViewController: UIViewController {
             firstImage.image = UIImage(named: (currentRandom?.image)!)
             secondImage.image = UIImage(named: (currentRandom?.image)!)
         }
-        
+        tempRestaurant = currentRandom
         currentRandom = RandomRestaurant.randomRestaurant(restaurants: appDelegate.restaurants)
         
         UIView.transition(from: fromView, to: toView, duration: 0.5, options: [.transitionCrossDissolve, .showHideTransitionViews])
@@ -57,16 +59,20 @@ class SecondViewController: UIViewController {
     @IBAction func buttonChangeView(_ sender: UIButton) {
         print("123456")
         if firstImage.image != #imageLiteral(resourceName: "question_mark") {
-            performSegue(withIdentifier: "showDetails", sender: sender)
+            performSegue(withIdentifier: "restaurantDetailSegue", sender: sender)
         }else{
             return;
         }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "showDetails" {
-            let destinationController = segue.destination as! ShowDetailViewController
-            destinationController.text = "123"
+        if segue.identifier == "restaurantDetailSegue" {
+            
+            let destinationController = segue.destination as! RestaurantDetailsViewController
+                //destinationController.restaurant =
+            destinationController.restaurant = tempRestaurant
+            
+            
         }
     }
     

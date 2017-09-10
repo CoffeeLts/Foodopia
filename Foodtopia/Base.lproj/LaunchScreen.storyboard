@@ -6,6 +6,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,15 +23,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launch" translatesAutoresizingMaskIntoConstraints="NO" id="3nt-Zj-RGB">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Foodtopia" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ocO-be-SIl">
+                                <rect key="frame" x="103.5" y="249.5" width="169" height="169"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ocO-be-SIl" secondAttribute="height" multiplier="1:1" id="Svv-2w-0Cu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <size key="shadowOffset" width="4" height="3"/>
+                            </label>
                         </subviews>
+                        <color key="backgroundColor" red="1" green="0.5016639232635498" blue="0.25138550996780396" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="3nt-Zj-RGB" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="7jq-Gj-hIk"/>
-                            <constraint firstAttribute="trailing" secondItem="3nt-Zj-RGB" secondAttribute="trailing" id="Kmj-en-rn0"/>
-                            <constraint firstItem="3nt-Zj-RGB" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="bGY-ZJ-j5J"/>
-                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="3nt-Zj-RGB" secondAttribute="bottom" id="txh-KB-hjg"/>
+                            <constraint firstItem="ocO-be-SIl" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="N8k-4S-gD7"/>
+                            <constraint firstItem="ocO-be-SIl" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" multiplier="0.45" id="Vl0-VO-Sig"/>
+                            <constraint firstItem="ocO-be-SIl" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="u0G-qp-UwE"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -38,7 +48,4 @@
             <point key="canvasLocation" x="52" y="374.66266866566718"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="launch" width="960" height="600"/>
-    </resources>
 </document>

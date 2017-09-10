@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -13,7 +15,7 @@
         <scene sceneID="vf3-JY-2kG">
             <objects>
                 <collectionViewController id="2ph-CI-WjD" customClass="HomePage" customModule="Foodtopia" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="dBj-if-CBf">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="dBj-if-CBf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -196,7 +198,7 @@
                         <outlet property="secondImage" destination="ryD-cR-WPM" id="Xpr-dl-NSQ"/>
                         <outlet property="secondView" destination="cBG-0e-0ag" id="cQJ-Th-dSd"/>
                         <outlet property="viewController" destination="M5I-w9-nTT" id="SWB-Mn-l0y"/>
-                        <segue destination="Iro-pq-95J" kind="show" identifier="showDetails" id="5M6-gB-iOy"/>
+                        <segue destination="iSf-7x-e7Z" kind="show" identifier="restaurantDetailSegue" id="is2-Fo-h2M"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
@@ -279,9 +281,10 @@
         <scene sceneID="SpC-Sq-cG4">
             <objects>
                 <navigationController id="khU-n4-Jq9" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7bM-8s-9pK">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="7bM-8s-9pK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="1" green="0.24625031519999999" blue="0.21211830500000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="Vzm-oU-cKo" kind="relationship" relationship="rootViewController" id="b1G-yK-9aI"/>
@@ -433,7 +436,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="vef-I8-xeO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="1" green="0.24625031518448437" blue="0.21211830499717566" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -450,9 +453,10 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="eu0-Vg-7fo" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="dice_tab" id="cPa-gy-q4n"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="4Wf-1R-UjQ">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="4Wf-1R-UjQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="1" green="0.24625031519999999" blue="0.21211830500000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -465,14 +469,12 @@
         </scene>
     </scenes>
     <resources>
-        <image name="BlackBox" width="500" height="500"/>
         <image name="BlackBoxMenu" width="500" height="500"/>
-        <image name="CaiJiaXiangMenu" width="500" height="500"/>
         <image name="dice" width="300" height="219"/>
         <image name="dice_tab" width="25" height="25"/>
         <image name="home_tab" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="2XP-gi-fCf"/>
+        <segue reference="is2-Fo-h2M"/>
     </inferredMetricsTieBreakers>
 </document>
